@@ -113,13 +113,9 @@ Quando se deseja implementar a funcionalidade de soft delete, a coluna deleted_a
 - Realize backups regulares e teste os procedimentos de restauração.
 - Monitore o desempenho do banco de dados e otimize conforme necessário.
 
-## 7. Considerações Finais
+## 7. Uso de Plural e Singular
 
-Estas convenções e boas práticas visam melhorar a legibilidade, manutenção e desempenho do banco de dados. É importante adaptar essas diretrizes às necessidades específicas do projeto e da equipe, mantendo a consistência ao longo do tempo.
-
-## 8. Uso de Plural e Singular
-
-### 8.1 Tabelas
+### 7.1 Tabelas
 - Use plural para nomes de tabelas que representam coleções (ex: `usuarios`, `produtos`).
 - Em nomes compostos, apenas o último termo deve estar no plural (ex: `categoria_produtos`, `status_pedidos`).
 - Para nomes com três ou mais palavras, mantenha a mesma regra: apenas o último termo no plural.
@@ -129,7 +125,7 @@ Exemplos com três ou mais palavras:
 - `log_acesso_sistema_externos`
 - `historico_alteracao_preco_produto`
 
-### 8.2 Colunas
+### 7.2 Colunas
 - Use singular para nomes de colunas (ex: `nome`, `endereco`).
 - Para chaves estrangeiras, use o nome da tabela referenciada no singular, seguido de "_id" (ex: `usuario_id`, `produto_id`).
 - Em colunas com nomes compostos por três ou mais palavras, mantenha todas no singular.
@@ -139,7 +135,7 @@ Exemplos com três ou mais palavras:
 - `numero_identificacao_fiscal`
 - `url_imagem_perfil_usuario`
 
-### 8.3 Exceções
+### 7.3 Exceções
 - Tabelas de junção muitos-para-muitos podem usar ambos os termos no singular (ex: `usuario_papel` para relacionar usuários e papéis).
 - Algumas entidades naturalmente plurais podem manter essa forma (ex: `dados_demograficos`).
 
@@ -147,11 +143,15 @@ Exemplos de exceções com três ou mais palavras:
 - `usuario_grupo_permissao` (tabela de junção)
 - `metricas_desempenho_vendas` (naturalmente plural)
 
-### 8.4 Regras Adicionais para Nomes Longos
+### 7.4 Regras Adicionais para Nomes Longos
 - Abrevie somente quando necessário
 - Mantenha os nomes concisos, mas descritivos.
 - Se um nome ficar muito longo, considere abreviações comumente entendidas no contexto do seu domínio.
 - Seja consistente com abreviações em todo o esquema do banco de dados.
+
+## 8. Considerações Finais
+
+Estas convenções e boas práticas visam melhorar a legibilidade, manutenção e desempenho do banco de dados. É importante adaptar essas diretrizes às necessidades específicas do projeto e da equipe, mantendo a consistência ao longo do tempo.
 
 ----
 
